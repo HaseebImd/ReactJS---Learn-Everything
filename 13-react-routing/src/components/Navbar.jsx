@@ -29,6 +29,14 @@ const Navbar = () => {
         >
           About Us
         </NavLink>
+        <NavLink
+          to="/product"
+          className={({ isActive }) =>
+            isActive ? "nav-link nav-link-active" : "nav-link"
+          }
+        >
+          Products
+        </NavLink>
       </nav>
     </header>
   );
