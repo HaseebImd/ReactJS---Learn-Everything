@@ -1,8 +1,8 @@
-import React, { useState } from "react";
-import axios from "axios";
+import API from "./components/API";
+import USEEffect from "./components/USEEffect";
+
 function App() {
   localStorage.setItem("name", "John Doe");
-  const [todos, setTodos] = useState([]);
 
   // Local storage has 4 methods: setItem(), getItem(), removeItem(), clear()
   // setItem() - adds data to local storage
@@ -25,19 +25,10 @@ function App() {
   //   console.log(todos);
   // }
 
-  async function getData() {
-    await axios
-      .get("https://jsonplaceholder.typicode.com/todos")
-      .then((response) => setTodos(response.data))
-      .catch((error) => console.log(error));
-  }
-
   return (
     <div>
-      <button onClick={getData}>Get Data</button>
-      {todos.map((todo, index) => {
-        return <h3 key={index}>{todo.title}</h3>;
-      })}
+      {/* <API /> */}
+      <USEEffect />
     </div>
   );
 }
