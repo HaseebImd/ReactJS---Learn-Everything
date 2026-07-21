@@ -1,16 +1,28 @@
-import React from "react";
 import { Link, Outlet } from "react-router";
 
 const Product = () => {
   return (
-    <div>
-      <h1>This is Product Page </h1>
-      <h1>This is Header </h1>
-      <Link to="/product/men">Men's Collections</Link>
-      <Link to="/product/women">Women's Collections</Link>
-      <Outlet />
-      <h2>This is Footer</h2>
-    </div>
+    <section className="page-shell">
+      <p className="page-kicker">Catalog</p>
+      <h1 className="page-title">Product Page</h1>
+      <p className="page-copy">Explore nested and dynamic routes here.</p>
+
+      <div className="tab-links">
+        <Link to="/product/men" className="page-btn page-btn-secondary">
+          Men&apos;s Collection
+        </Link>
+        <Link to="/product/women" className="page-btn page-btn-secondary">
+          Women&apos;s Collection
+        </Link>
+        <Link to="/product/101" className="page-btn page-btn-primary">
+          Open Product #101
+        </Link>
+      </div>
+
+      <div className="nested-panel">
+        <Outlet />
+      </div>
+    </section>
   );
 };
 

@@ -1,10 +1,16 @@
-import React from "react";
 import { useParams } from "react-router";
 
 const ProductDetails = () => {
-  const param = useParams();
+  const { id } = useParams();
 
-  return <div>{param.id}Product Details</div>;
+  return (
+    <section className="collection-shell">
+      <h2>Product Details</h2>
+      <p>
+        Showing details for product id: <strong>{id ?? "N/A"}</strong>
+      </p>
+    </section>
+  );
 };
 
 export default ProductDetails;

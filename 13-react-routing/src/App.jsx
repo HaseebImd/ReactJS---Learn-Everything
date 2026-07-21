@@ -8,6 +8,8 @@ import MenCollection from "./components/MenCollection";
 import WomenCollection from "./components/WomenCollection";
 import ProductDetails from "./components/ProductDetails";
 import NotFound from "./pages/NotFound";
+import "./pages/PageStyles.css";
+
 const App = () => {
   return (
     <div>
